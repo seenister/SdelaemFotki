@@ -8,90 +8,76 @@
 	<title>SdelaemFotki - Сервис заказа фотографий</title>
 	<link rel="stylesheet" href="C:\Users\Жопыч\Desktop\css\main.css">
 </head>
-<!DOCTYPE html>
 
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,  initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>SdelaemFotki - Сервис заказа фотографий</title>
-	<link rel="stylesheet" href="C:\Users\Жопыч\Desktop\css\main.css">
-</head>
 <body>
-	<header>
-		<div id="logo" onclick="slowScroll('#top')">
-			<span>SdelaemFotki</span>
-		</div>
-		<div id="about">
-			<a href="#" title="Почему мы?" onclick="slowScroll('#main')">Почему мы?</a>
-			<a href="#" onclick="slowScroll('#overiew')" title="Сделать заказ">Сделать заказ</a>
-			<a href="#" onclick="slowScroll('#contancs')" title="Отследить заказ">Отследить заказ</a>
-			<a href="#" onclick="slowScroll('#faq')" title="Контакты">Контакты</a>
-		</div>
-	</header>
+<header>
+
+<div id="logo" onclick="slowScroll('#top')">
+<span>SdelaemFotki</span>
+</div>
+
+<div id="about">
+<a href="#" title="Почему мы?" onclick="slowScroll('#main')">Почему мы?</a>
+<a href="#" onclick="slowScroll('#makeanorder')" title="Сделать заказ">Сделать заказ</a>
+<a href="#" onclick="slowScroll('#followtheorder')" title="Отследить заказ">Отследить заказ</a>
+<a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+</div>
+</header>
 	
-	<div id="top">
-	<h2>Отправьте нам фотографии прямо сейчас</h2>
-	<h3>и курьер доставит их Вам в печатном виде уже сегодня!</h3>
-	</div>
+<div id="top">
+<h2>Отправьте нам фотографии прямо сейчас</h2>
+<h3>и курьер доставит их Вам в печатном виде уже сегодня!</h3>
+</div>
 	
 	
-	<div id="main">
+<div id="main">
 	<div class="intro">
-	<h2>Мы - лучшие в своем деле!</h2>
+	 <h2>Мы - лучшие в своем деле!</h2>
 	</div>
 	<div class="text">
-	<span><center>Самая быстрая доставка фотографий в Москве: с отправки заказа в течение 90 минут курьер приедет к Вашей двери </br>
-	<br>
-	Работаем только на высокачественном оборудовании</br>
-<br>
-	Низкие цены на производимые услуги	
-	
-	<br>
-	
- </center></span> 
+	 <span><center>Самая быстрая доставка фотографий в Москве: </br>
+	 </br> с отправки заказа в течение 90 минут курьер приедет к Вашей двери </br>
+	 <br>Работаем только на высокачественном оборудовании</br>
+	 <br>Низкие цены на производимые услуги<br></center></span> 
 	</div>
-	</div>
+</div>
 	
-	<div id="overview">
-    <h2>Преимущества</h2>
-    <h4>с нами все проще</h4>
-
-    <div class="img">
-      <img src="https://itproger.com/img/courses/1532975967.jpg" alt="">
-      <span>Изучение языка Ruby для начинающих</span>
-    </div>
-    <div class="img">
-      <img src="https://itproger.com/img/courses/1530341233.jpg" alt="">
-      <span>Уроки PhotoShop для начинающих</span>
-    </div>
-  </div>
+<div id="makeanorder">
+ <center><h5>Заполните форму и отправьте фотографии нам на печать уже сейчас!</h5></center>
+	<form id="form_input">
+	
+	 
+	 <div id="mess_send" class="btn">Отправить</div>
+	</form>
+</div>
   
+  
+  
+<div id="followtheorder">
+	<center><h5>Проверить состояние Вашего заказа </h5></center>
+	<form id="form_input">
+		<center><label for="name">Введите номер заказа <span>*</span></label><br></center>
+		<center><input type="text" placeholder="Введите номер заказа" name="id" id="idorder"><br></center>
+		<center><div id="mess_send" class="btn">Отправить</div></center>
+	</form>
+</div>
+
+
+
 <div id="contacts">
-    <center><h5>Заполните форму и отправьте фотографии нам на печать уже сейчас!</h5></center>
-    <form id="form_input">
-      <label for="name">Имя <span>*</span></label><br>
-      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
-      <label for="email">Ваша почта <span>*</span></label><br>
-			<input type="email" placeholder="Введите email" name="email" id="email"><br>
-			
-			<label for="message">Сообщение <span>*</span></label><br>
-			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
-			<div id="mess_send" class="btn">Отправить</div>
-    </form>
-  </div>
+    <div>
+      <span class="heading">Контакты: г. Москва, ул. Селижорова, дом 34</br>
+	  тел: 84999999999</span>
+ </div>
 
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script>
-
 function slowScroll(id){
 	$('html,body').animate({
 	scrollTop: $(id).offset().top
 	}, 500);
 }
-
 $(document).on("scroll", function() {
 if($(window).scrollTop() === 0)
 $("header").removeClass("fixed");
@@ -99,5 +85,6 @@ else
 $("header").attr("class", "fixed");
 });
 </script>
+
 </body>
 </html>
