@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5 {
   
 }
 
-#form_input input,textarea {
+#form_input input {
   margin-bottom: 10px;
   width: 70%;
   padding: 10px 2%;
@@ -245,6 +245,7 @@ h1, h2, h3, h4, h5 {
   font-size: 0.9em;
   color: #4a4a4a;
 }
+
 
 #form_input input:focus {
   border-color: #333;
@@ -264,8 +265,23 @@ h1, h2, h3, h4, h5 {
   cursor: pointer;
   color: white;
 }
+.btn2 {
+  float: left;
+  width: 50%;
+  margin-left: 13.5%;
+  border-radius: 5px;
+  padding: 20px 8px;
+  font-size: 1.2em;
+  background-color: #FFE4B5;
+  text-shadow: #454545 0 0 2px;
+  cursor: pointer;
+  color: white;
+}
 
 .btn:hover {
+  background-color: #c15443;
+}
+.btn2:hover {
   background-color: #c15443;
 }
 
@@ -306,4 +322,66 @@ h1, h2, h3, h4, h5 {
   color: #4a4a4a;
   font-size: 0.95em;
   margin-bottom: 40px;
+}
+
+*{
+    font-family: Areal;
+}
+
+
+
+.b-container{											/* pop-up форма Сделать заказ */
+    width:200px;
+    height:150px;
+    background-color: #ccc;
+    margin:0px auto;
+    padding:10px;
+    font-size:30px;
+    color: #fff;
+}
+.b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(20,0,50,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+.b-popup .b-popup-content{
+    margin:70px auto 0px auto;
+    width:350px;
+    height: 450px;
+    padding:100px;
+    background-color: #FFFFFF;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+
+
+.b-container2{											/* pop-up форма Отследить заказ */
+    width:200px;
+    height:150px;
+    background-color: #ccc;
+    margin:0px auto;
+    padding:10px;
+    font-size:30px;
+    color: #fff;
+}
+.b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(20,0,50,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+.b-popup .b-popup-content1{
+    margin:70px auto 0px auto;
+    width:350px;
+    height: 450px;
+    padding:100px;
+    background-color: #FFFFFF;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
 }

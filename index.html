@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="C:\Users\Жопыч\Desktop\css\main.css">
 </head>
 
+
 <body>
 <header>
 
@@ -42,37 +43,86 @@
 	</div>
 </div>
 	
-<div id="makeanorder">
+	
+	
+
+	
+	
+<div id="makeanorder">										<!-- Блок Сделать заказ заказ -->
  <center><h5>Заполните форму и отправьте фотографии нам на печать уже сейчас!</h5></center>
 	<form id="form_input">
-	
-	 
+	<a href="javascript:PopUpShow()">
 	 <div id="mess_send" class="btn">Отправить</div>
+	 </a>
 	</form>
 </div>
+
+
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+ <form id="form_input">
+		<center><label for="name">Введите ФИО <span>*</span></label><br></center>
+		<center><input type="text" placeholder="Введите ФИО"  id="sendfio"><br></center>
+		<center><label for="name">Выберите доставку <span>*</span></label><br></center>
+		<center><input type="text" placeholder="Курьер/Самовывоз"  id="senddelivery"><br></center>
+		<center><label for="name">Выберите способ оплаты <span>*</span></label><br></center>
+		<center><input type="text" placeholder="Наличными/картой"  id="sendpay"><br></center>
+		<center><label for="name">Напишите комментарий </label><br></center>
+		<center><input type="text" placeholder="..."  id="sendcommend"><br></center>
+		<center><div id="sendtosdelatzakaz" class="btn">Отправить</div></center>
+	</form>
+    <a href="javascript:PopUpHide()">Hide popup</a>
+    </div>
+</div>
+	
   
   
   
-<div id="followtheorder">
+
+  
+<div id="followtheorder">								<!-- Блок отследить отследить заказ -->
 	<center><h5>Проверить состояние Вашего заказа </h5></center>
 	<form id="form_input">
 		<center><label for="name">Введите номер заказа <span>*</span></label><br></center>
 		<center><input type="text" placeholder="Введите номер заказа" name="id" id="idorder"><br></center>
-		<center><div id="mess_send" class="btn">Отправить</div></center>
+		
+		<a href="javascript:PopUpShow2()">
+		<center><div id="mess_send2" class="btn">Отправить</div></center>
+		</a>
+		
 	</form>
 </div>
 
 
+<div class="b-popup" id="popup2">
+    <div class="b-popup-content">
+ <form id="form_input">
+		<center><label for="name">Ваш номер заказа <span>*</span></label><br></center>
+		<center><input type="text" placeholder="Введите ФИО" name="id" id="idorder2"><br></center>
+		
+	</form>
+	
+    <a href="javascript:PopUpHide2()">
+	<center><div id="close2popup" class="btn2">Закрыть</div></center>
+	</a>
+    </div>
+</div>
 
-<div id="contacts">
+
+
+<div id="contacts">										
     <div>
       <span class="heading">Контакты: г. Москва, ул. Селижорова, дом 34</br>
 	  тел: 84999999999</span>
  </div>
 
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
+
+
+<script>															<!-- скрипт для скролла -->
 function slowScroll(id){
 	$('html,body').animate({
 	scrollTop: $(id).offset().top
@@ -85,6 +135,36 @@ else
 $("header").attr("class", "fixed");
 });
 </script>
+
+
+
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script> 			<!-- скрипт для pop up формы -->
+
+<script>
+    $(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+		PopUpHide2();
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        $("#popup1").show();
+    }
+	function PopUpShow2(){
+        $("#popup2").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        $("#popup1").hide();
+    }
+	function PopUpHide2(){
+        $("#popup2").hide();
+    }
+</script>
+
+
+
+
 
 </body>
 </html>
