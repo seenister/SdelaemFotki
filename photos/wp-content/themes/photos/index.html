@@ -1,0 +1,105 @@
+  
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SdelaemFotki - Сервис заказа фотографий</title>
+	<link rel="stylesheet" href="libs/bootstrap.min.css">
+	<link rel="stylesheet" href="style/style.css">
+
+
+</head>
+
+<body style="width: 70%; margin-left: auto; margin-right: auto; position: relative;">
+	<header class="header">
+		<div class="container">
+			<h1>Мы лучшие в своем деле!</h1>
+			<ul>
+				<li>Самая быстрая доставка фотографий в Москве</li>
+				<li>В течение 90 минут с момента отправки заказа курьер доставит их по указанному адресу</li>
+				<li>Работаем только на высокачественном оборудовании</li>
+				<li>Низкие цены на производимые услуги</li>
+			</ul>
+		</div>
+	</header>
+
+	<section class="order hidden">
+		<div class="container" style="background-color: #eee; padding-top: 2vw; padding-bottom: 2vw; position: relative;">
+			<div class="close" style="width: 40px; height: 40px; position: absolute; top: 0.5vw; right: 0.5vw; cursor: pointer"><img src="img/close-icon.png" alt="" style="width: 100%;"></div>
+			<h2>Отправьте нам фотографии прямо сейчас <span>и курьер доставит их Вам в печатном виде уже сегодня!</span></h2>
+			<form action="/" class="order-form">
+				<div class="form-group">
+					<label for="requisites" class="label">Укажите ваши Ф.И.О.</label>
+					<input type="text" name="requisites" class="requisites form-control" id="requisites">
+				</div>
+
+				<div class="form-group">
+					<p>Укажите способ оплаты</p>
+
+					<input type="radio" id="cashless"
+						   name="payment" value="cashless">
+					<label for="cashless">Безналичная</label>
+					<br>
+					<input type="radio" id="cash"
+						   name="payment" value="cash">
+					<label for="cash">Наличная</label>
+				</div>
+
+				<div class="form-group">
+					<p>Укажите способ доставки</p>
+					<input type="radio" id="delivery"
+						   name="shipment" value="delivery">
+					<label for="delivery">Доставка</label>
+					<br>
+					<input type="radio" id="pickup"
+						   name="shipment" value="pickup">
+					<label for="pickup">Самовывоз</label>
+				</div>
+
+				<div class="form-group">
+					<p>Дополнительно можно заказать услуги ретуши</p>
+					<input type="checkbox" id="retouch" name="retouch">
+					<label for="retouch">Ретушь нужна</label>
+				</div>
+
+				<div class="form-group">
+					<label for="files">Прикрепить файлы изображений (до 10 штук в формате JPEG)</label>
+					<input type="file" id="files" name="files" multiple accept="image/*,image/jpeg" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<p>Комментарий к заказу (необязательно)</p>
+					<textarea name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" class="form-control">
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section class="check hidden">
+		<div class="container" style="background-color: #eee; padding-top: 2vw; padding-bottom: 2vw; position: relative;">
+			<h4>Укажите номер заказа</h4>
+			<div class="close" style="width: 40px; height: 40px; position: absolute; top: 0.5vw; right: 0.5vw; cursor: pointer;"><img src="img/close-icon.png" alt="" style="width: 100%;"></div>
+			<form action="/" class="check-form">
+				<input type="number" id="order-number" name="order-number" class="form-control" style="margin-bottom: 2vw;">
+				<input type="submit" class="form-control">
+			</form>
+		</div>
+	</section>
+
+	<section class="buttons" style="text-align: center">
+		<button style="display: block; width: 85%;" class="form-control order-button">Заказать фотографии</button>
+		<br>
+		<button style="display: block; width: 85%;" class="form-control check-button">Проверить заказ</button>
+	</section>
+
+
+	<script src="libs/jquery-3.4.1.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
